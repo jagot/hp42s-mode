@@ -1,0 +1,26 @@
+#+TITLE: hp42s-mode.el
+#+AUTHOR: Stefanos Carlström
+#+EMAIL: stefanos.carlstrom@gmail.com
+
+Emacs mode for editing HP42s code.
+
+* Installation
+  Place [[file:./hp42s-mode.el][hp42s-mode.el]] in a convenient directory,
+  e.g. =~/.emacs.d/lisp/= and add that directory to your Emacs load
+  path:
+  #+BEGIN_SRC emacs-lisp
+    (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
+  #+END_SRC
+  Then add
+  #+BEGIN_SRC emacs-lisp
+    (require 'hp42s-mode)
+  #+END_SRC
+  to your =init.el= and restart Emacs.
+
+  By default, =hp42s-mode= is triggered when visiting a file with the
+  extension =.hp42s=.
+
+* Known limitations/ideas
+  * Numbers are not font-locked yet, due to collision with =LN1+X=.
+  * It would be nice to have some kind of automatic translation from
+    e.g. =R^= to =R↑= when starting a new line.
